@@ -8,6 +8,7 @@
         - [Whitespaces](#whitespaces)
         - [Commas (`,`)](#commas)
         - [Colons (`:`)](#colons)
+        - [Equal-sign (`=`)](#equal-sign)
         - [Braces (`{}`)](#braces)
         - [Properties](#properties)
         - [Control Flow Statements](#control-flow-statements)
@@ -24,6 +25,7 @@
     - [Type Inference](#type-inference)
     - [Collections / SequenceTypes](#collections--sequencetypes)
     - [Protection from Retain Cycles](#protection-from-retain-cycles)
+    - [Extensions](#extensions)
 
 
 
@@ -262,14 +264,14 @@ case .Failure:self.reportError()
 <tr>
 <td><pre lang=swift>
 let dictionary = [
-	"key"       : "value",
-	"other_key" : "other_value"
+    "key"       : "value",
+    "other_key" : "other_value"
 ]
 </pre></td>
 <td><pre lang=swift>
 let dictionary = [
-	"key" : "value",
-	"other_key" : "other_value"
+    "key" : "value",
+    "other_key" : "other_value"
 ]
 </pre></td>
 </tr>
@@ -720,12 +722,12 @@ if let strongSelf = self {
 <tr>
 <td><pre lang=swift>
 let array = self.dataSource.filter { item in
-	return item.key != ""
+    return item.key != ""
 }
 </pre></td>
 <td><pre lang=swift>
 let array = self.dataSource.filter { item in
-	item.key != ""
+    item.key != ""
 }
 </pre></td>
 </tr>
@@ -777,12 +779,12 @@ public typealias VoidBlock = (() -> ())
 <tr>
 <td><pre lang=swift>
 let closure = {
-	// do something here
+    // do something here
 }
 </pre></td>
 <td><pre lang=swift>
 let closure = { () in
-	// do something here
+    // do something here
 }
 </pre></td>
 </tr>
@@ -1099,17 +1101,17 @@ Do not use `@objc` and `dynamic` until it is necessary.
 <tr>
 <td><pre lang=swift>
 /**
-	Lorem ipsum dolor sit amet.
-	
-	- parameter animated: Consectetur adipisicing elit.
-	
-	- returns: Does not have a return value.
+    Lorem ipsum dolor sit amet.
+    
+    - parameter animated: Consectetur adipisicing elit.
+    
+    - returns: Does not have a return value.
 */
 
 override func viewWillAppear(animated: Bool) {
-	super.viewWillAppear(animated)
-	
-	// do something
+    super.viewWillAppear(animated)
+    
+    // do something
 }
 
 
@@ -1564,6 +1566,7 @@ self.request.downloadImage(
 </tr>
 </table>
 
+
 ## Extensions
 
 
@@ -1584,9 +1587,9 @@ extension Object : NilLiteralConvertible {
 </pre></td>
 <td><pre lang=swift>
 extension Object: CustomStringConvertible, NilLiteralConvertible {
-	
-	// functions and variables
-	
+    
+    // functions and variables
+    
 }
 </pre></td>
 </tr>
