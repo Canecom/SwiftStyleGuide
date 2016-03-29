@@ -11,7 +11,7 @@
         - [Braces (`{}`)](#braces)
         - [Properties](#properties)
         - [Control Flow Statements](#control-flow-statements)
-        - [Closures](#closure)
+        - [Closures](#closures)
     - [Naming](#naming)
         - [Capitalization](#capitalization)
         - [Semantics](#semantics)
@@ -1596,4 +1596,4 @@ extension Object: CustomStringConvertible, NilLiteralConvertible {
 
 ---
 
-[Back to top](#table-of-contents)
+[Back to top](#swift-style-guide)
