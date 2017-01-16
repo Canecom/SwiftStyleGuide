@@ -1,0 +1,126 @@
+disabled_rules: # rule identifiers to exclude from running
+  - opening_brace
+  - trailing_whitespace
+  - conditional_binding_cascade
+  - vertical_whitespace
+
+opt_in_rules: # some rules are only opt-in
+  - force_unwrapping
+  - force_https
+  - empty_count
+  - missing_docs
+
+empty_count: warning
+
+line_length: 120
+
+force_cast: warning
+force_try: warning
+
+statement_position:
+  statement_mode: uncuddled_else
+
+variable_name:
+  min_length: 4
+  max_length: 40
+  excluded:
+    - row
+    - key
+    - id
+    - url
+    - uri
+    - db
+    - red
+    - lhs
+    - rhs
+    - tag
+    - rs
+    - URI
+    - URL
+    - new
+    - old
+    - to
+    - zip
+    - max
+
+
+type_body_length:
+  - 700 #warning
+  - 1000 #error
+
+function_body_length:
+  - 60 #warning
+  - 200 #error
+
+file_length:
+  - 1500 #warning
+  - 2000 #error
+
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Tests
+  - iOS/Application/Assets
+
+custom_rules:
+  pirates_beat_ninjas: # rule identifier
+    included: "*.swift" # regex that defines paths to include during linting. optional.
+    name: "Pirates Beat Ninjas" # rule name. optional.
+    regex: "([n,N]inja)" # matching pattern
+    match_kinds: # SyntaxKinds to match. optional.
+      - comment
+      - identifier
+    message: "Pirates are better than ninjas." # violation message. optional.
+    severity: warning # violation severity. optional.
+  todo_or_fixme:
+    regex: "(todo|fixme)"
+    match_kinds: comment
+    serverity: warning
+  double_space:
+    include: "*.swift"
+    name: "Double space"
+    regex: "([a-z,A-Z] \s+)"
+    message: "Double space between keywords"
+    match_kinds: keyword
+    severity: warning
+  empty_line_after_super:
+    name: "Empty Line After Super"
+    regex: "(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)"
+    message: "There should be an empty line after super"
+    severity: warning
+  unnecessary_type:
+    name: "Unnecessary Type"
+    regex: "[ a-zA-Z0-9]*(?:let|var) [ a-zA-Z0-9]*: ([a-zA-Z0-9]*)[\? ]*= \1"
+    message: "Type Definition Not Needed"
+    severity: warning
+  multiple_empty_lines:
+    name: "Multiple Empty Lines"
+    regex: "((?:\s*\n){3,})"
+    message: "There are too many line breaks"
+    severity: warning
+  empty_line_after_guard:
+    name: "Empty Line After Guard"
+    regex: "(^ *guard[ a-zA-Z0-9=?.\(\),><!]*\{[ a-zA-Z0-9=?.\(\),><!]*\}\n *(?!(?:return|guard))\S+)"
+    message: "There should be an empty line after a guard"
+    severity: warning
+  comments_space:
+    name: "Space After Comment"
+    regex: "(^ *//(?!(MARK|swiftlint|FIXME|TODO))\w+)"
+    message: "There should be a space after //"
+    severity: warning
+  empty_first_line:
+    name: "Empty First Line"
+    regex: "(^[ a-zA-Z ]*(?:protocol|extension|class|struct) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)"
+    message: "There should be an empty line after a declaration"
+    severity: warning
+#  comments_capitalized_ignore_possible_code:
+#    name: "Capitalize First Word In Comment"
+#    regex: "(^ +// +(?!swiftlint)[a-z]+)"
+#    message: "The first word of a comment should be capitalized"
+#    severity: warning
+#  comments_capitalized_find_possible_code:
+#    name: "Catch Commented Out Code"
+#    regex: "(^ *// +(?!swiftlint)[a-z]+)"
+#    message: "The first word of a comment should be capitalized"
+#    severity: warning

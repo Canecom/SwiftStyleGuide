@@ -2,6 +2,13 @@
 
 # Swift Style Guide
 
+TL;DR
+
+We are using [SwiftLint](https://github.com/realm/SwiftLint) with the attached .swiflint.yml rules. 
+
+-----
+
+
 - [Styles and Conventions](#styles-and-conventions)
     - [Formatting](#formatting)
         - [Semicolons (`;`)](#semicolons)
